@@ -1,0 +1,56 @@
+[
+  {
+    "graph": "cycle_4",
+    "depth": 1,
+    "qubits": 4,
+    "rzz": 4,
+    "rx": 4,
+    "source": "qiskit.QuantumCircuit.draw(output=\"text\")",
+    "file": "cycle_4_p1.svg"
+  },
+  {
+    "graph": "cycle_4",
+    "depth": 2,
+    "qubits": 4,
+    "rzz": 8,
+    "rx": 8,
+    "source": "qiskit.QuantumCircuit.draw(output=\"text\")",
+    "file": "cycle_4_p2.svg"
+  },
+  {
+    "graph": "weighted_5",
+    "depth": 1,
+    "qubits": 5,
+    "rzz": 7,
+    "rx": 5,
+    "source": "qiskit.QuantumCircuit.draw(output=\"text\")",
+    "file": "weighted_5_p1.svg"
+  },
+  {
+    "graph": "weighted_5",
+    "depth": 2,
+    "qubits": 5,
+    "rzz": 14,
+    "rx": 10,
+    "source": "qiskit.QuantumCircuit.draw(output=\"text\")",
+    "file": "weighted_5_p2.svg"
+  },
+  {
+    "graph": "weighted_6",
+    "depth": 1,
+    "qubits": 6,
+    "rzz": 9,
+    "rx": 6,
+    "source": "qiskit.QuantumCircuit.draw(output=\"text\")",
+    "file": "weighted_6_p1.svg"
+  },
+  {
+    "graph": "weighted_6",
+    "depth": 2,
+    "qubits": 6,
+    "rzz": 18,
+    "rx": 12,
+    "source": "qiskit.QuantumCircuit.draw(output=\"text\")",
+    "file": "weighted_6_p2.svg"
+  }
+]

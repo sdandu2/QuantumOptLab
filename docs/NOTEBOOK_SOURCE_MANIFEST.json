@@ -1,0 +1,61 @@
+{
+  "manifest_version": 1,
+  "source_notebooks": [
+    {
+      "file": "notebooks/01_quantum_circuits_and_noise.ipynb",
+      "cells": 17,
+      "original_sha256": "0abfa38d67f7351d544aa8970caa108047da749313ca81c263cf69315c7c45ab",
+      "original_kind": "original-notebook-source",
+      "public_source_sha256": "2dc025c891c2314273ab9495f2950d67fa3a3f5459097489547c4b261f54fc69",
+      "note": "Source-only public copy. Executed original remains outside this public candidate."
+    },
+    {
+      "file": "notebooks/02_maxcut_qaoa_baselines.ipynb",
+      "cells": 19,
+      "original_sha256": "98d32db88707000f7628f4c295c847a889b8178777731ae2e8c518b5dbf968b1",
+      "original_kind": "user-executed-file",
+      "public_source_sha256": "80638d502312bd37bc411db5bddcdbfd0670c194a1a2ee8885a40d43992729ac",
+      "note": "Source-only public copy. Executed original remains outside this public candidate."
+    },
+    {
+      "file": "notebooks/03_qaoa_noise_robustness.ipynb",
+      "cells": 21,
+      "original_sha256": "312a41cc11dc1791739ead377973bde5aaab57a756d6dcf82ae9c8aab608a3ee",
+      "original_kind": "user-executed-file",
+      "public_source_sha256": "8a6fa9e3c90cdcb76ae8bb63919a68acc091faecce5e57398a2bb6926421e5b2",
+      "note": "Source-only public copy. Executed original remains outside this public candidate."
+    },
+    {
+      "file": "notebooks/04_qaoa_generalization_and_noise.ipynb",
+      "cells": 23,
+      "original_sha256": "d2427cd1aee1518850fa5f340ce6701d6f1fa8de2e708279c16822f675ca067c",
+      "original_kind": "user-executed-file",
+      "public_source_sha256": "8620d7c47f3f83b096becb2494f93142f9182f7e1db79da9c80e5486644806d6",
+      "note": "Source-only public copy. Executed original remains outside this public candidate."
+    },
+    {
+      "file": "notebooks/05_noise_aware_depth_selection.ipynb",
+      "cells": 25,
+      "original_sha256": "df1cbcefe4ac21c110d73135f8cd9513bd16208d9cd840d26dc33dde915f60ae",
+      "original_kind": "user-executed-file",
+      "public_source_sha256": "1c2ae411961b2ff949421c69ca9096e97ab787258a7528ed76f42c9014c3f1f3",
+      "note": "Source-only public copy. Executed original remains outside this public candidate."
+    },
+    {
+      "file": "notebooks/06a_frozen_selector_locked_test.ipynb",
+      "cells": 17,
+      "original_sha256": "57fdb0ed560a8a8627ef0f2c5bb80e34c7ed381b20db93982979d819cbe141b8",
+      "original_kind": "user-executed-file",
+      "public_source_sha256": "989fcb6df3f3c78e94939e7a05162679c4e259308965b5df1cde23978fbd9077",
+      "note": "Source-only public copy. Executed original remains outside this public candidate."
+    },
+    {
+      "file": "notebooks/06b_qiskit_hardware_aware_transpilation.ipynb",
+      "cells": 11,
+      "original_sha256": "1e8b615563fbc7ec7d97e0b2dca425fc60d16875d9e23c7fb15d140cfc136064",
+      "original_kind": "user-executed-file",
+      "public_source_sha256": "541d6f41ae1bac6bc6df248beaa49cf0d45e920c1a84ccba3ea252a55d6af235",
+      "note": "Source-only public copy. Executed original remains outside this public candidate."
+    }
+  ]
+}

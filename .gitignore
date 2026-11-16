@@ -1,0 +1,49 @@
+# Python environments, caches, and test artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# All notebook-generated or user-local research output remains private until curated
+reports/
+data/
+external/
+models/
+checkpoints/
+*.joblib
+*.pkl
+*.pickle
+
+# Local credentials, VS Code settings, temporary artifacts
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
+
+# React and generated quantum circuit previews (rebuild locally)
+web/node_modules/
+web/dist/
+web/.vite/
+
+# Local working snapshots and archived release attempts
+release/
+public_release/
+
+web/tsconfig.tsbuildinfo

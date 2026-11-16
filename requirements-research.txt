@@ -1,0 +1,4 @@
+# Installs the editable package plus research notebooks and tests.
+# Exact Qiskit and Aer versions are pinned in pyproject.toml.
+# Remaining packages are bounded but NOT a fully resolved lockfile.
+-e .[research,dev]
