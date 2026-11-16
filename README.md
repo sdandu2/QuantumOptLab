@@ -69,10 +69,19 @@ better than simple rules on the locked test. Experimental outputs and private
 checkpoints are deliberately not packaged in the public source copy; the
 source files and a hash manifest document their provenance.
 
-## Status
+## Published status
 
-**M7C public release candidate**, not yet a verified GitHub release. The original working project passed 20 Python tests, the website data/UI checks, and the Vite build on Windows. The isolated candidate must still import the author-generated npm lockfile, pass fresh-install verification, undergo license and security review, and obtain green GitHub Actions checks after publication. See `docs/RELEASE_CHECKLIST.md`.
+QuantumOptLab is publicly available at [sdandu2/QuantumOptLab](https://github.com/sdandu2/QuantumOptLab).
+The initial GitHub Actions run passed both the Qiskit/Python and React/Node jobs. An isolated local
+verification also passed 21 Python tests, the release hygiene audit, Qiskit circuit exports, and
+the production frontend build. This does not imply the full research notebooks have been independently rerun.
 
-**License:** No public license has been selected by the author. Choose an
-explicit license before offering reuse rights; a public GitHub repository
-without a license is not automatically open source.
+**License:** [MIT](LICENSE). A tagged GitHub Release is optional and has not yet been verified.
+
+## Live website
+
+A [GitHub Pages deployment workflow](.github/workflows/pages.yml) is provided. After enabling
+**Settings → Pages → Source: GitHub Actions** and a successful Pages workflow run, the
+expected public address is **https://sdandu2.github.io/QuantumOptLab/**.
+The URL should not be treated as live until deployment succeeds. See [deployment guide](docs/DEPLOYMENT.md).
+The site visualizes precomputed experiments, not jobs running on a quantum processor.

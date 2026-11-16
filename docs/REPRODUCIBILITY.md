@@ -10,17 +10,16 @@ python -m pytest -q
 python -m quantumoptlab
 python .\scripts\audit_repository.py
 python .\web\scripts\export_qiskit_circuits.py
-cd web; npm install; npm run build; npm run dev
+cd web; npm ci; npm run build; npm run dev
 ```
 
 For a deterministic research *configuration*, seed 31 was used throughout
 experiments; each notebook records its own expanded optimizer and simulator
 seed settings. Qiskit and Aer versions are pinned in `pyproject.toml`.
-**Other Python dependency versions and frontend packages are not yet fully
-locked**. Generate `web/package-lock.json` locally using `npm install`,
-review it, then commit it and switch CI to `npm ci` in M7C. A separately
-reviewed Python freeze/lock is also needed for cross-machine byte-for-byte
-reproduction; CI proves execution, not exact physical reproducibility.
+The committed `web/package-lock.json` supports `npm ci` in CI and for local website verification.
+The entire Python dependency graph is not pinned to a byte-for-byte environment lock; a separate
+reviewed lock would be required for stronger cross-machine reproducibility. Passing CI confirms
+clean installation and software checks, not a full rerun of the research notebooks or physical QPU results.
 
 ## Re-running full research
 

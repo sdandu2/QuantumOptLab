@@ -40,7 +40,7 @@ function ExactGateStructure({graph,depth}:{graph:GraphDefinition;depth:Depth}){
 export default function QAOACircuit({graph,depth}:{graph:GraphDefinition;depth:Depth}){
   const [view,setView]=useState<View>('qiskit');
   const [available,setAvailable]=useState<boolean|null>(null);
-  const url=useMemo(()=>`/circuits/${graph.id}_p${depth}.svg`,[graph.id,depth]);
+  const url=useMemo(()=>`${import.meta.env.BASE_URL}circuits/${graph.id}_p${depth}.svg`,[graph.id,depth]);
   useEffect(()=>setAvailable(null),[url]);
   return <div className="circuit-v2">
     <div className="circuit-view-head"><div><span className="data-origin">GATE-LEVEL IMPLEMENTATION</span><p>Each weighted edge becomes one two-qubit RZZ gate per layer. RX mixes each qubit afterward.</p></div><Segmented value={view} onChange={setView} options={[{value:'qiskit' as const,label:'Qiskit output'},{value:'structure' as const,label:'Structure view'}]}/></div>
