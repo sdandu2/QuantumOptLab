@@ -23,7 +23,7 @@ button, select { color-scheme: dark; }
 .feature-card:hover, .btn:hover { transform: translateY(-2px); }
 .home-hero { background: radial-gradient(ellipse at 68% 45%,#124243 0%,#082628 40%,#071d1e 81%); }
 .hero-visual:before { content:""; position:absolute; inset:16% 13%; border-radius:50%; background:radial-gradient(circle at 43% 41%,rgba(217,176,140,.10),transparent 37%),radial-gradient(circle,rgba(39,142,130,.19),transparent 64%); pointer-events:none; filter:blur(21px); }
-.hero-mode-picker button, .hero-bottom-left, .sphere-label, .hero-rail { font-size: 11px; }
+
 .takeaway-section h2 { font-size:clamp(40px,4.15vw,70px); }
 .takeaway-section p { font-size: 14px; line-height: 1.85; }
 .page-intro>p { max-width: 620px; font-size: 16px; line-height: 1.85; color:#b9d8ca; }
@@ -146,7 +146,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,[tabindex="0"]:focus-v
   .eyebrow { font-size:10px; }
   .hero-subtitle { font-size:13px; }
   .page-intro>p { font-size:14px; }
-  .hero-mode-picker button { font-size:10px; }
+  
   .explorer-v2 .panel-context { margin:0 18px 16px; font-size:13px; }
   .explorer-v2 .cut-graph { min-height:340px; }
   .explorer-v2 .graph-legend { font-size:9px; }
@@ -204,4 +204,66 @@ button:focus-visible,a:focus-visible,select:focus-visible,[tabindex="0"]:focus-v
  .dataset-band>div { padding:14px 11px; }
  .dataset-band strong { font-size:35px; }
  .dataset-band span { font-size:9px; }
+}
+
+/* M7A.2 — Calm, arrow-free navigation and a single-purpose animated hero.
+   These overrides intentionally leave functional dropdown indicators and menu
+   controls intact while simplifying all decorative call-to-action graphics. */
+
+/* Remove unnecessary mode-switch chrome from the landing artwork. */
+.hero-inner { height:calc(100% - 58px); }
+.hero-bottom { height:58px; align-items:center; gap:28px; }
+.hero-bottom-left { font-size:11px; letter-spacing:.10em; }
+.hero-bottom-left>span:not(.status-led) { color:#91b6ac; margin-left:25px; }
+.hero-bottom-detail {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  color:#9cc4b7;
+  font:500 11px/1.5 'DM Mono',monospace;
+  letter-spacing:.09em;
+  white-space:nowrap;
+}
+.hero-bottom-detail span { color:#d9b08c; }
+
+/* Give wording more room once the decorative arrows are gone. */
+.btn,
+.header-button,
+.hero-text-link,
+.inline-link,
+.next-route-link,
+.method-outro a,
+.feature-card-cta { letter-spacing:.025em; line-height:1.45; }
+.btn { min-width:182px; min-height:52px; height:auto; padding:16px 32px; gap:0; text-align:center; }
+.header-button { min-width:112px; min-height:44px; padding:13px 25px; justify-content:center; gap:0; text-align:center; }
+.hero-buttons { gap:32px; flex-wrap:wrap; }
+.hero-text-link { padding:12px 0; font-size:13px; }
+.inline-link,.next-route-link { gap:0; padding-bottom:9px; }
+.feature-card-cta { display:inline-flex; width:fit-content; margin-top:auto; padding-top:22px; padding-bottom:5px; border-bottom:1px solid rgba(217,176,140,.48); font-size:12px; }
+.feature-card:hover .feature-card-cta, .feature-card:focus-visible .feature-card-cta { border-bottom-color:#ffcb9a; color:#ffcb9a; }
+.feature-card-meta { justify-content:flex-start; }
+.method-outro a { gap:0; padding-bottom:10px; }
+.footer-bottom a { text-transform:none; }
+
+/* Keep primary navigation legible without inflating the entire header. */
+.site-nav { gap:clamp(21px,2.5vw,41px); }
+.site-nav a { font-size:13px; }
+
+@media(max-width:1160px) {
+  .hero-bottom-left>span:not(.status-led) { display:inline; }
+  .site-nav { gap:17px; }
+}
+@media(max-width:900px) {
+  .hero-bottom { padding-left:clamp(24px,4vw,48px); padding-right:clamp(24px,4vw,48px); }
+  .hero-bottom-detail { font-size:10px; gap:10px; }
+}
+@media(max-width:650px) {
+  .hero-inner { padding-bottom:0; }
+  .hero-bottom { min-height:58px; height:auto; padding:12px 22px; display:flex; flex-direction:row; justify-content:center; }
+  .hero-bottom-left { display:flex; font-size:10px; }
+  .hero-bottom-left>span:not(.status-led),.hero-bottom-detail { display:none; }
+  .hero-buttons { gap:17px; align-items:center; }
+  .hero-buttons .btn { height:auto; min-height:46px; min-width:0; padding:12px 19px; }
+  .hero-text-link { font-size:12px; padding:10px 0; }
+  .feature-card-cta { font-size:12px; }
 }

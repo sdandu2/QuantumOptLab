@@ -17,7 +17,7 @@ function mesh() {
 }
 const sphere=mesh();
 
-export default function OrbCanvas({ mode='circuit' }:{mode?:'circuit'|'noise'|'hardware'}) {
+export default function OrbCanvas() {
   const canvas=useRef<HTMLCanvasElement>(null);
   const pointer=useRef({x:0,y:0});
   useEffect(()=>{
@@ -56,7 +56,7 @@ export default function OrbCanvas({ mode='circuit' }:{mode?:'circuit'|'noise'|'h
         ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
         const front=Math.max(0,(z+1)/2);
         ctx.lineWidth=.6+front*.85;
-        ctx.strokeStyle= mode==='noise' ? `rgba(244,188,143,${.08+front*.47})` : `rgba(115,226,217,${.09+front*.39})`;
+        ctx.strokeStyle=`rgba(115,226,217,${.09+front*.39})`;
         ctx.stroke();
       }
       for(let i=0;i<points.length;i++){
@@ -85,6 +85,6 @@ export default function OrbCanvas({ mode='circuit' }:{mode?:'circuit'|'noise'|'h
     };
     draw();
     return()=>{cancelAnimationFrame(raf);ro.disconnect();el.removeEventListener('pointermove',onMove);el.removeEventListener('pointerleave',onLeave);};
-  },[mode]);
+  },[]);
   return <canvas ref={canvas} className="orb-canvas" aria-label="Animated geodesic quantum-network sphere visualization" role="img"/>;
 }

@@ -20,7 +20,7 @@ export function Icon({name,size=18,className=''}:{name:string;size?:number;class
   return <svg viewBox="0 0 24 24" width={size} height={size} className={className} aria-hidden="true" {...common}>{paths[name]||paths.atom}</svg>;
 }
 export function Eyebrow({children,light=false}:{children:ReactNode;light?:boolean}){return <div className={`eyebrow${light?' eyebrow-light':''}`}><span className="eyebrow-square"/>{children}</div>}
-export function ButtonLink({to,children,secondary=false}:{to:string;children:ReactNode;secondary?:boolean}){return <a className={`btn ${secondary?'btn-ghost':'btn-primary'}`} href={to}>{children}<Icon name="arrowup" size={17}/></a>}
+export function ButtonLink({to,children,secondary=false}:{to:string;children:ReactNode;secondary?:boolean}){return <a className={`btn ${secondary?'btn-ghost':'btn-primary'}`} href={to}>{children}</a>}
 export function SectionHeading({kicker,title,desc}:{kicker:string;title:ReactNode;desc?:ReactNode}){return <div className="section-heading"><Eyebrow>{kicker}</Eyebrow><h2>{title}</h2>{desc&&<p>{desc}</p>}</div>}
 export function Segmented<T extends string|number>({options,value,onChange}:{options:{value:T;label:string}[];value:T;onChange:(v:T)=>void}){
   return <div className="segmented" role="group" aria-label="Select display mode">{options.map(o=><button key={o.value} className={o.value===value?'is-active':''} onClick={()=>onChange(o.value)} type="button" aria-pressed={o.value===value}>{o.label}</button>)}</div>;

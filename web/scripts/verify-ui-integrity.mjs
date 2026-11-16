@@ -1,4 +1,4 @@
-/** Dependency-free scientific UX invariants for M7A.1. These are source checks,
+/** Dependency-free scientific UX invariants for M7A.2. These are source checks,
  * not a substitute for a live browser, typecheck or actual Qiskit run.
  */
 import fs from 'node:fs';
@@ -8,6 +8,10 @@ const circuit=read('../src/components/QAOACircuit.tsx');
 const hardware=read('../src/pages/Hardware.tsx');
 const bench=read('../src/pages/Benchmarks.tsx');
 const method=read('../src/pages/Methodology.tsx');
+const home=read('../src/pages/Home.tsx');
+const app=read('../src/App.tsx');
+const ui=read('../src/components/UI.tsx');
+const orb=read('../src/components/OrbCanvas.tsx');
 const exporter=read('./export_qiskit_circuits.py');
 const requireCheck=(condition,name)=>{if(!condition)throw Error('FAIL: '+name);console.log('PASS:',name)};
 requireCheck(explore.includes('maxcut-math')&&explore.includes('CROSSING EDGES'),'Explained weighted Max-Cut objective and crossing-edge metrics');
@@ -19,4 +23,6 @@ requireCheck(bench.includes('min:0,max:0.8')&&bench.includes('dot-track'),'Polic
 requireCheck(hardware.includes('compiled.unrestricted[opt][depth]'),'Hardware ratio uses same optimization level');
 requireCheck(hardware.includes('shortestRoute')&&hardware.includes('not the compiler'),'Connectivity teaching path is explicitly illustrative');
 requireCheck(method.includes('40</strong>')&&method.includes('LOCKED TEST'),'Graph split described in methodology');
-console.log('PASS: 9/9 scientific-UI source safeguards');
+requireCheck(!home.includes('hero-mode-picker')&&!home.includes('setFocus')&&!home.includes('mode={focus}')&&home.includes('<OrbCanvas/>')&&!orb.includes('mode?:'), 'Single ambient sphere without unnecessary three-mode switcher');
+requireCheck(![home,app,ui,explore,bench,hardware,method].some(src=>/<Icon name="(?:arrow|arrowup)"/.test(src)) && !app.includes('TOP ↑'), 'All decorative CTA arrows removed while functional controls remain');
+console.log('PASS: 11/11 scientific-UI source safeguards');

@@ -55,6 +55,6 @@ export default function Explore(){
       </div>
     </section>
     <section className="panel circuit-panel" aria-labelledby="circuit-heading"><div className="panel-head"><div><span className="panel-index">04 / QISKIT CIRCUIT ANATOMY</span><h2 id="circuit-heading">From the objective to gates</h2></div><DataTag>{depth} QAOA LAYER{depth===1?'':'S'}</DataTag></div><QAOACircuit graph={graph} depth={depth}/></section>
-    <div className="next-route"><div><Eyebrow>CONTINUE THE EXPLORATION</Eyebrow><h2>What happens when those gates become noisy?</h2></div><a href="#/benchmarks" className="next-route-link">Investigate noise <Icon name="arrow" size={20}/></a></div>
+    <div className="next-route"><div><Eyebrow>CONTINUE THE EXPLORATION</Eyebrow><h2>What happens when those gates become noisy?</h2></div><a href="#/benchmarks" className="next-route-link">Investigate noise</a></div>
   </main>;
 }
