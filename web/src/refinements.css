@@ -1,4 +1,4 @@
-/* M7A.1 — editorial typography, scientific legibility, and accurate controls. */
+/* M7A.1 â€” editorial typography, scientific legibility, and accurate controls. */
 :root {
   --ink: #edf6f0;
   --ink-dim: #bedbd0;
@@ -62,8 +62,8 @@ button, select { color-scheme: dark; }
 .maxcut-max { font-size:clamp(24px,2.2vw,33px); flex-direction:column; line-height:1.1; }
 .maxcut-max small { font-size:12px; white-space:nowrap; color:#c2ded1; margin-top:8px; }
 .maxcut-max sup { font-size:10px; }
-.maxcut-sum { font-size:clamp(52px,5vw,81px); line-height:1; flex-direction:column; }
-.maxcut-sum small { font:12px 'Cambria Math',Georgia,serif; color:#c2ded1; margin-top:-3px; }
+.maxcut-sum { font-size:clamp(44px,4.1vw,65px); line-height:1.05; flex-direction:column; }
+.maxcut-sum small { font:11px 'Cambria Math',Georgia,serif; color:#c2ded1; margin-top:6px; white-space:nowrap; }
 .maxcut-equation { font-size:clamp(26px,2.5vw,38px); white-space:nowrap; }
 .maxcut-equation sub { font-size:.50em; align-self:flex-end; margin-bottom:-.10em; }
 .math-glossary { display:grid; gap:0; margin:23px 0 20px; }
@@ -157,7 +157,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,[tabindex="0"]:focus-v
   .maxcut-math { gap:12px; padding:30px 0; }
   .maxcut-max { font-size:23px; }
   .maxcut-max small { font-size:10px; }
-  .maxcut-sum { font-size:51px; }
+  .maxcut-sum { font-size:42px; }
   .maxcut-sum small { font-size:10px; }
   .maxcut-equation { font-size:27px; }
   .math-glossary>div { grid-template-columns:106px 1fr; gap:10px; }
@@ -206,7 +206,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,[tabindex="0"]:focus-v
  .dataset-band span { font-size:9px; }
 }
 
-/* M7A.2 — Calm, arrow-free navigation and a single-purpose animated hero.
+/* M7A.2 â€” Calm, arrow-free navigation and a single-purpose animated hero.
    These overrides intentionally leave functional dropdown indicators and menu
    controls intact while simplifying all decorative call-to-action graphics. */
 
